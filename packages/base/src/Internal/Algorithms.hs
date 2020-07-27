@@ -26,6 +26,8 @@ module Internal.Algorithms (
   UpLo(..)
 ) where
 
+import Prelude hiding ((<>))
+
 import Internal.Vector
 import Internal.Matrix
 import Internal.Element
@@ -1158,4 +1160,3 @@ instance Field t => Additive (Herm t) where
 --   for usage in 'chol', 'eigSH', etc. Only a triangular part of the matrix will be used.
 trustSym :: Matrix t -> Herm t
 trustSym x = (Herm x)
-
